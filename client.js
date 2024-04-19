@@ -20,9 +20,9 @@ const connect = function () {
 
     conn.setEncoding("utf8");
 
-    return conn;
-  });
 
+  });
+  return conn;
 };
 
 module.exports = { connect };
