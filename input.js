@@ -11,8 +11,7 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-// finishes game when ctrl + c is hit
-
+// stores key's assigned commands and interacts with setupInput() to send the info to the server
 const handleUserInput = function (data) {
   const keyIn = {
     w: "Move: up",

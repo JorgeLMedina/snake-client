@@ -8,14 +8,13 @@ const connect = function () {
     port: PORT
   });
 
+  // Sends a message and initial to server when connection is made
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: JMM");
-    /* setTimeout(() => {
-      conn.write("Move: down"), 500
-    });*/
   });
 
+  // Registers data received by the server and prints it
   conn.on("data", (data) => {
     console.log("Message from server:", data);
 
